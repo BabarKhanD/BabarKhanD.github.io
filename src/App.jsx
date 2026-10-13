@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import ParticleBackground from './components/ParticleBackground'
+import Projects from './components/Projects'
 import './App.css'
 
 const LINKS = {
@@ -114,6 +115,7 @@ export default function App() {
             </div>
           </div>
         </section>
+        <Projects />
       </main>
     </>
   )
