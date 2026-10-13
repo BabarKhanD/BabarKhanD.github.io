@@ -1,122 +1,120 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
+import { useEffect, useState } from 'react'
+import ParticleBackground from './components/ParticleBackground'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+const LINKS = {
+  github: 'https://github.com/BabarKhanD',
+  linkedin: 'https://www.linkedin.com/in/babar-khan-durrani-542a98277',
+  contra: 'https://contra.com/babar_durrani_3fgf7tlz/work?r=babar_durrani_3fgf7tlz',
+  email: 'mailto:kdurranibabar@gmail.com',
+}
+
+const NAV = [
+  ['Work', '#work'],
+  ['Research', '#research'],
+  ['Experience', '#experience'],
+  ['Certificates', '#certificates'],
+  ['Skills', '#skills'],
+  ['About', '#about'],
+  ['Contact', '#contact'],
+]
+
+const ROLES = ['AI Engineer', 'Computer Vision', 'Robotics', 'Generative AI', 'ML Systems']
+
+const STATS = [
+  ['100%', 'recall: bone metastasis detection'],
+  ['0.847', 'ROC-AUC on MVTec AD 2 (Sheet Metal)'],
+  ['0.887', 'F1-macro: F1 track limits, 4,254 incidents'],
+  ['20+', 'public repositories on GitHub'],
+]
+
+export default function App() {
+  const [scrolled, setScrolled] = useState(false)
+  const [open, setOpen] = useState(false)
+  const [roleIdx, setRoleIdx] = useState(0)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  useEffect(() => {
+    const id = setInterval(() => setRoleIdx((i) => (i + 1) % ROLES.length), 2200)
+    return () => clearInterval(id)
+  }, [])
 
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
+      <header className={`nav ${scrolled ? 'scrolled' : ''}`}>
+        <div className="container nav-inner">
+          <a href="#top" className="logo">
+            BABAR<span>.</span>DURRANI
+          </a>
+          <button className="burger" onClick={() => setOpen(!open)} aria-label="Menu">
+            {open ? '✕' : '☰'}
+          </button>
+          <ul className={`nav-links ${open ? 'open' : ''}`}>
+            {NAV.map(([label, href]) => (
+              <li key={href}>
+                <a href={href} onClick={() => setOpen(false)}>{label}</a>
+              </li>
+            ))}
             <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
+              <a className="nav-cta" href="/Babar_Khan_Durrani_CV.pdf" target="_blank" rel="noreferrer">
+                CV
               </a>
             </li>
           </ul>
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      </header>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+      <main id="top">
+        <section className="hero">
+          <ParticleBackground />
+          <div className="container">
+            <div className="hero-grid">
+              <div>
+                <p className="eyebrow">AI / COMPUTER VISION / ROBOTICS</p>
+                <h1>
+                  Babar Khan <span className="grad-text">Durrani</span>
+                </h1>
+                <p className="role-line">
+                  &gt; <b key={roleIdx}>{ROLES[roleIdx]}</b>
+                </p>
+                <p className="hero-sub">
+                  Building intelligent systems that perceive, reason and operate. Robotics &amp;
+                  Intelligent Systems undergraduate shipping end-to-end AI: perception, inference,
+                  retrieval, deployment and robotics.
+                </p>
+                <div className="btn-row">
+                  <a className="btn btn-primary" href="#work">View Projects</a>
+                  <a className="btn btn-ghost" href={LINKS.github} target="_blank" rel="noreferrer">GitHub</a>
+                  <a className="btn btn-ghost" href="/Babar_Khan_Durrani_CV.pdf" target="_blank" rel="noreferrer">Download CV</a>
+                </div>
+                <div className="chips">
+                  <span className="chip">◉ AI</span>
+                  <span className="chip">◉ CV</span>
+                  <span className="chip">◉ ROBOTICS</span>
+                  <span className="chip">◉ RAG</span>
+                </div>
+              </div>
+              <div className="photo-wrap">
+                <img className="photo" src="/profile.jpg" alt="Babar Khan Durrani" />
+              </div>
+            </div>
+
+            <div className="stats">
+              {STATS.map(([value, label]) => (
+                <div className="stat" key={label}>
+                  <strong>{value}</strong>
+                  <span>{label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </main>
     </>
   )
 }
-
-export default App
