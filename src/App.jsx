@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import ParticleBackground from './components/ParticleBackground'
 import Projects from './components/Projects'
+import { Experience, Certificates, Skills, About, Contact, Footer } from './components/Sections'
 import './App.css'
 
 const LINKS = {
@@ -12,7 +13,6 @@ const LINKS = {
 
 const NAV = [
   ['Work', '#work'],
-  ['Research', '#research'],
   ['Experience', '#experience'],
   ['Certificates', '#certificates'],
   ['Skills', '#skills'],
@@ -23,10 +23,10 @@ const NAV = [
 const ROLES = ['AI Engineer', 'Computer Vision', 'Robotics', 'Generative AI', 'ML Systems']
 
 const STATS = [
-  ['100%', 'recall: bone metastasis detection'],
-  ['0.847', 'ROC-AUC on MVTec AD 2 (Sheet Metal)'],
+  ['15/15', 'bone metastasis cases caught (Focal Loss CNN)'],
+  ['1.43×', 'ONNX Runtime vs PyTorch on CPU (VisionServe)'],
   ['0.887', 'F1-macro: F1 track limits, 4,254 incidents'],
-  ['20+', 'public repositories on GitHub'],
+  ['17', 'projects on GitHub'],
 ]
 
 export default function App() {
@@ -116,7 +116,13 @@ export default function App() {
           </div>
         </section>
         <Projects />
+        <Experience />
+        <Certificates />
+        <Skills />
+        <About />
+        <Contact />
       </main>
+      <Footer />
     </>
   )
 }

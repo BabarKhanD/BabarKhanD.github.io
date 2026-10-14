@@ -1,0 +1,130 @@
+{
+  "config": {
+    "images": [
+      "bus.jpg",
+      "zidane.jpg"
+    ],
+    "iterations_per_image": 100,
+    "warmup_per_image": 10,
+    "rounds": 2,
+    "input_size": 640,
+    "conf_threshold": 0.25,
+    "iou_threshold": 0.45
+  },
+  "environment": {
+    "timestamp_utc": "2026-10-10T17:43:53+00:00",
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.12.9",
+    "cpu": "Intel64 Family 6 Model 78 Stepping 3, GenuineIntel",
+    "logical_cores": 4,
+    "ram_gb": 8.5,
+    "threads_setting": "library default",
+    "packages": {
+      "torch": "2.14.1+cpu",
+      "onnxruntime": "1.30.0",
+      "onnx": "1.23.1",
+      "ultralytics": "8.4.173",
+      "numpy": "2.5.3",
+      "opencv-python-headless": "5.0.0.93"
+    },
+    "gpu_used": false
+  },
+  "backends": {
+    "native": {
+      "rounds": 2,
+      "samples_total": 400,
+      "pooled_total_latency_ms": {
+        "mean": 195.92034800004512,
+        "median": 194.69379999827652,
+        "p95": 225.61270000005607,
+        "min": 162.89270000197575,
+        "max": 253.23500000013155,
+        "stdev": 17.122319872659805
+      },
+      "stage_mean_ms": {
+        "preprocess_ms": 9.967973749999146,
+        "inference_ms": 182.8392357500161,
+        "postprocess_ms": 3.1131385000298906,
+        "total_ms": 195.92034800004512
+      },
+      "stage_p95_ms": {
+        "preprocess_ms": 13.163850000637467,
+        "inference_ms": 211.76569999988715,
+        "postprocess_ms": 4.372950001197751,
+        "total_ms": 226.3954499976535
+      },
+      "throughput_fps_mean": 5.089993526634254,
+      "per_round_mean_total_ms": [
+        195.22620650001045,
+        196.6144895000798
+      ],
+      "per_round_fps": [
+        5.108331752945608,
+        5.071655300322901
+      ],
+      "model_file": "yolov8n.pt",
+      "model_file_mb": 6.549796,
+      "framework": "torch 2.14.1+cpu",
+      "load_s_mean": 3.7503239000016038,
+      "first_inference_s_mean": 0.26292970000031346,
+      "rss_after_load_mb_mean": 260.81280000000004,
+      "rss_peak_mb_mean": 300.38016000000005
+    },
+    "onnx": {
+      "rounds": 2,
+      "samples_total": 400,
+      "pooled_total_latency_ms": {
+        "mean": 137.24130949999562,
+        "median": 136.10789999984263,
+        "p95": 171.57719999886467,
+        "min": 105.20660000111093,
+        "max": 201.32480000029318,
+        "stdev": 20.569264070657123
+      },
+      "stage_mean_ms": {
+        "preprocess_ms": 10.142423000033887,
+        "inference_ms": 123.98227024994412,
+        "postprocess_ms": 3.116616250017614,
+        "total_ms": 137.24130949999562
+      },
+      "stage_p95_ms": {
+        "preprocess_ms": 11.613449998549186,
+        "inference_ms": 148.7285500006692,
+        "postprocess_ms": 3.898450000633602,
+        "total_ms": 162.51225000087288
+      },
+      "throughput_fps_mean": 7.306198654063147,
+      "per_round_mean_total_ms": [
+        125.93757250000635,
+        148.5450464999849
+      ],
+      "per_round_fps": [
+        7.906926461648641,
+        6.7054708464776525
+      ],
+      "model_file": "yolov8n.onnx",
+      "model_file_mb": 12.704103,
+      "framework": "onnxruntime 1.30.0",
+      "load_s_mean": 0.4272265500003414,
+      "first_inference_s_mean": 0.12161809999997786,
+      "rss_after_load_mb_mean": 102.38976,
+      "rss_peak_mb_mean": 141.934592
+    }
+  },
+  "parity": {
+    "bus.jpg": {
+      "same_classes_and_order": true,
+      "native_count": 5,
+      "onnx_count": 5,
+      "max_confidence_diff": 0.0,
+      "max_bbox_diff_px": 0.0
+    },
+    "zidane.jpg": {
+      "same_classes_and_order": true,
+      "native_count": 3,
+      "onnx_count": 3,
+      "max_confidence_diff": 0.0,
+      "max_bbox_diff_px": 0.0
+    }
+  }
+}

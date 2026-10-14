@@ -1,0 +1,18 @@
+{
+  "n_seeds": 30,
+  "warmup_steps": 10,
+  "adaptive_mean_error": 0.16815488588904096,
+  "adaptive_std_error": 0.0973969092151766,
+  "fusion_mean_error": 0.2236631046237825,
+  "fusion_std_error": 0.047705940590619784,
+  "ins_mean_error": 0.20217422183275502,
+  "ins_std_error": 0.08340940833976031,
+  "improvement_vs_fusion_pct": 24.817780665304802,
+  "improvement_vs_ins_pct": 16.82674261600766,
+  "mean_switches": 0.0,
+  "std_switches": 0.0,
+  "t_stat_vs_fusion": -5.644151437838801,
+  "p_value_vs_fusion": 4.2452065736184785e-06,
+  "t_stat_vs_ins": -12.09783463007275,
+  "p_value_vs_ins": 7.436711681846342e-13
+}

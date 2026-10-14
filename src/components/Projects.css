@@ -67,3 +67,13 @@
   .cols-2 { grid-template-columns: 1fr; }
   .bar-row { grid-template-columns: 90px 1fr 60px; }
 }
+.credit { font-size: .78rem; color: var(--muted); margin-top: 2px; }
+.card-note { font-size: .8rem; color: var(--muted); border-left: 2px solid var(--accent); padding-left: 10px; margin-top: 12px; }
+.shot { margin: 14px 0 0; }
+.shot img { width: 100%; border-radius: 12px; border: 1px solid var(--border); background: #fff; }
+.shot figcaption { margin-top: 8px; font-size: .78rem; color: var(--muted); }
+.flag-wide { grid-column: 1 / -1; }
+.flag-wide .shot { margin-top: 6px; }
+.bench-facts { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 10px; }
+.bench-facts span { font-family: var(--font-mono); font-size: .72rem; padding: 4px 10px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 12%, transparent); border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); color: var(--muted); }
+.bench-facts b { color: var(--accent); }
