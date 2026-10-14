@@ -23,10 +23,10 @@ const NAV = [
 const ROLES = ['AI Engineer', 'Computer Vision', 'Robotics', 'Generative AI', 'ML Systems']
 
 const STATS = [
-  ['15/15', 'bone metastasis cases caught (Focal Loss CNN)'],
-  ['1.43×', 'ONNX Runtime vs PyTorch on CPU (VisionServe)'],
-  ['0.887', 'F1-macro: F1 track limits, 4,254 incidents'],
-  ['17', 'projects on GitHub'],
+  ['2', 'AI/ML internships: Embotics and DevelopersHub'],
+  ['3.11', 'CGPA out of 4.00, BS Robotics & Intelligent Systems'],
+  ['4', 'languages: Pashto, Urdu, English, Punjabi'],
+  ['6', 'roles across industry, internships and IEEE leadership'],
 ]
 
 export default function App() {
