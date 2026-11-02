@@ -32,9 +32,9 @@ export const AI = [
   {
     repo: 'local-ai-research-assistant',
     title: 'Local AI Research Assistant',
-    desc: 'Fully local RAG assistant for research papers: Q&A with source and chunk tracking, structured summaries and two-paper comparison. BGE embeddings, ChromaDB retrieval with relevance filtering, and Gemma 3 1B served locally through LM Studio.',
+    desc: 'Fully local RAG assistant for research papers: Q&A with source and chunk tracking, structured summaries and two-paper comparison. Built as an n8n workflow (workflow file in the repo) with BGE embeddings, ChromaDB retrieval with relevance filtering, and Gemma 3 1B served locally through LM Studio.',
     metric: '100% local · no API keys',
-    tags: ['RAG', 'ChromaDB', 'BGE', 'LM Studio', 'Gemma 3'],
+    tags: ['n8n', 'RAG', 'ChromaDB', 'BGE', 'LM Studio', 'Gemma 3'],
     accent: '#a78bfa',
   },
   {
@@ -54,52 +54,8 @@ export const AI = [
     tags: ['FastF1', 'Random Forest', 'XGBoost', 'SHAP'],
     accent: '#fb923c',
   },
-  {
-    repo: 'adaptive-sensor-selection-auv-navigation',
-    title: 'Adaptive Sensor Selection for AUV Navigation',
-    desc: 'Confidence-driven sensor selection for position estimation in GPS-denied autonomous underwater vehicle navigation, compared against sensor fusion and INS-only baselines in simulation.',
-    metric: '0.168 m error vs 0.224 m (fusion) · 24.8% lower',
-    note: 'Simulation study over 30 seeds; full results and figures in the repo.',
-    image: '/projects/auv-fig4.png',
-    tags: ['Robotics', 'Sensor fusion', 'Simulation', 'SciPy'],
-    accent: '#22d3ee',
-  },
 ]
 
-export const BUSINESS = [
-  {
-    repo: 'property-doc-intelligence',
-    title: 'Property Document Intelligence',
-    desc: 'Upload property PDFs, extract text and ask questions with page-cited answers using RAG.',
-    tags: ['RAG', 'FastAPI', 'SQLite'],
-    accent: '#34d399',
-  },
-  {
-    repo: 'maintenance-ai',
-    title: 'Maintenance AI',
-    desc: 'Turns maintenance requests into AI-triaged work orders with vendor matching.',
-    tags: ['Python', 'SQLite', 'LLM'],
-    accent: '#fbbf24',
-  },
-  {
-    repo: 'property-ops-assistant',
-    title: 'Property Ops Assistant',
-    desc: 'AI assistant demo for day-to-day property operations.',
-    tags: ['AI automation', 'Python'],
-    accent: '#a78bfa',
-  },
-  {
-    repo: 'tenant-followup',
-    title: 'Tenant Follow-up',
-    desc: 'Automated tenant follow-up workflow demo.',
-    tags: ['AI automation', 'Python'],
-    accent: '#f472b6',
-  },
-]
-
-export const FOUNDATIONS = [
-  { repo: 'heart-disease-prediction-ml', title: 'Heart Disease Prediction', desc: 'ML model predicting heart disease on the UCI dataset.', tags: ['Scikit-learn', 'Jupyter'], accent: '#f472b6' },
-  { repo: 'House-Price-Prediction-', title: 'House Price Prediction', desc: 'Linear Regression and Gradient Boosting with MAE/RMSE evaluation and multiple visualizations.', tags: ['Scikit-learn', 'Pandas'], accent: '#60a5fa' },
-  { repo: 'stock_price_apple', title: 'Apple Stock Price Prediction', desc: 'Next-day closing price prediction with Linear Regression and Random Forest using yfinance data.', tags: ['yfinance', 'Random Forest'], accent: '#34d399' },
-  { repo: 'python-job-scraper-task6-elevvo', title: 'Python Job Scraper', desc: 'Extracts Python job listings from a saved Indeed HTML page.', tags: ['Web scraping', 'Python'], accent: '#fbbf24' },
-]
+// Removed from the portfolio (kept as empty lists so existing imports still work)
+export const BUSINESS = []
+export const FOUNDATIONS = []

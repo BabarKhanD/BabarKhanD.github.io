@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import Reveal from './Reveal'
-import { repo, AI, BUSINESS, FOUNDATIONS } from '../data/projects'
+import { repo, AI } from '../data/projects'
 import './Projects.css'
 
 const ROBO_STAGES = [
@@ -207,9 +207,11 @@ export default function Projects() {
         <RoboSight />
         <VisionServe />
 
-        <Group title="AI / Computer Vision / ML" sub="Medical imaging, inspection, sports analytics, local LLMs, motorsport telemetry and navigation." items={AI} />
-        <Group title="Business AI Demos" sub="Automation demos built for real-estate and property operations." items={BUSINESS} />
-        <Group title="ML Foundations" sub="Core machine learning projects." items={FOUNDATIONS} />
+        <Group
+          title="AI / Computer Vision / ML"
+          sub="Medical imaging, inspection, sports analytics, local LLMs and motorsport telemetry."
+          items={AI}
+        />
 
         <Reveal>
           <p className="all-repos">
