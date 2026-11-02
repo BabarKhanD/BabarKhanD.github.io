@@ -54,6 +54,15 @@ export const AI = [
     tags: ['FastF1', 'Random Forest', 'XGBoost', 'SHAP'],
     accent: '#fb923c',
   },
+  {
+    repo: 'AUV-Confidence-Weighting',
+    title: 'AUV Navigation: Confidence Weighting',
+    desc: 'GPS-denied AUV position estimation with a Kalman filter that scores each sensor (DVL, vision, sonar SLAM) by windowed normalized innovation squared and inflates its measurement covariance as it degrades, instead of dropping it. Compared against chi-square gating, a Sage-Husa adaptive filter, a per-sensor IMM and hard sensor selection.',
+    metric: '0.316 m RMSE vs 0.370 m gated (Scenario A) · about 15% lower',
+    note: '100 held-out Monte Carlo seeds. Comparable to IMM at about 7.6× lower runtime; IMM is more accurate in Scenario B (0.425 m vs 0.445 m).',
+    tags: ['Kalman filter', 'Sensor fusion', 'State estimation', 'Monte Carlo', 'Python'],
+    accent: '#38bdf8',
+  },
 ]
 
 // Removed from the portfolio (kept as empty lists so existing imports still work)
