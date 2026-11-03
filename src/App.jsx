@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import ParticleBackground from './components/ParticleBackground'
 import Projects from './components/Projects'
+import Engineering from './components/Gallery'
 import { Experience, Certificates, Skills, About, Contact, Footer } from './components/Sections'
 import './App.css'
 
@@ -13,6 +14,7 @@ const LINKS = {
 
 const NAV = [
   ['Work', '#work'],
+  ['Engineering', '#engineering'],
   ['Experience', '#experience'],
   ['Certificates', '#certificates'],
   ['Skills', '#skills'],
@@ -116,6 +118,7 @@ export default function App() {
           </div>
         </section>
         <Projects />
+        <Engineering />
         <Experience />
         <Certificates />
         <Skills />

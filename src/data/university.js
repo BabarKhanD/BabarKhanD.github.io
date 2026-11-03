@@ -1,0 +1,51 @@
+export const UNIVERSITY = [
+  {
+    id: 'robotic-arm',
+    title: '4-DOF Robotic Arm',
+    course: 'Introduction to Robotics · Bahria University',
+    metric: 'Built and tested on real hardware',
+    desc: 'Joystick-controlled pick-and-place arm. Built a kit-based 4-DOF arm with servos on an Arduino Uno and a PWM servo driver, wrote the joystick-to-servo control code in Arduino IDE, and tested each joint and full pick-and-place runs. Documented with a CAD model, exploded view, MATLAB Simscape model and DH parameters.',
+    tags: ['Arduino', 'Servo control', 'CAD', 'MATLAB / Simscape'],
+    accent: '#fbbf24',
+    media: [
+      { type: 'image', src: '/projects/arm-hardware.png', caption: 'The assembled robotic arm' },
+      { type: 'image', src: '/projects/arm-cad.png', caption: 'CAD model of the arm' },
+    ],
+  },
+  {
+    id: 'bulcs',
+    title: 'BULCS: Inter-Campus Lab Network',
+    course: 'Computer Communication & Networks · Bahria University',
+    metric: '4 campuses · 392 PCs · simulated in Cisco Packet Tracer',
+    desc: 'Simulated secure network linking four campuses in a star topology. OSPF routing and ACLs restrict traffic so only same-named labs communicate across campuses, a Rector’s PC has full access, and each campus server hosts an ACL-protected website. Tested with ping.',
+    tags: ['Cisco Packet Tracer', 'OSPF', 'ACLs', 'Subnetting'],
+    accent: '#22d3ee',
+    media: [
+      { type: 'image', src: '/projects/ccn.png', caption: 'Network topology in Cisco Packet Tracer' },
+      { type: 'video', src: '/projects/bulcs-demo.mp4', caption: 'Demo video' },
+    ],
+  },
+  {
+    id: 'eeg-emotion',
+    title: 'EEG-Based Emotion Detection',
+    course: 'Artificial Intelligence · Bahria University',
+    metric: 'Honest result: all three models scored R² ≈ 0',
+    desc: 'Exploratory analysis of a 1,000-sample EEG band-power dataset (alpha, beta, delta, theta, gamma) with six emotion categories and a continuous emotion score. Power BI histograms inspect each band’s distribution, then Linear Regression, Random Forest and SVR are compared with actual-vs-predicted and residual plots. No model beat predicting the mean, so this dataset shows no learnable link between band power and emotion score.',
+    tags: ['Python', 'Scikit-learn', 'Power BI', 'Regression'],
+    accent: '#a78bfa',
+    media: [
+      { type: 'image', src: '/projects/eeg-histogram.png', caption: 'Band-power distributions' },
+      { type: 'image', src: '/projects/eeg-output.png', caption: 'Model outputs: Linear Regression, Random Forest, SVR' },
+    ],
+  },
+  {
+    id: 'robotic-leg',
+    title: '3D Robotic Leg Design',
+    course: 'Engineering Drawing & CAD · Bahria University',
+    metric: 'Design and 3D modeling project',
+    desc: '3D CAD model of a multi-joint robotic leg for industrial use, built in AutoCAD with joints and servo mounts.',
+    tags: ['AutoCAD', '3D modeling'],
+    accent: '#34d399',
+    media: [{ type: 'image', src: '/projects/autocad.png', caption: 'The robotic leg model in AutoCAD' }],
+  },
+]
