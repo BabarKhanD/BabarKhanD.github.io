@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import Reveal from './Reveal'
+import { SKILLS } from '../data/skills'
 import './Sections.css'
 
 const PRO = [
@@ -135,7 +136,7 @@ const CERTS = [
   },
 ]
 
-const SKILLS = [
+const OLD_SKILLS = [
   ['Programming', '#22d3ee', ['Python', 'C++']],
   ['AI & Machine Learning', '#a78bfa', ['PyTorch', 'Scikit-learn', 'NumPy', 'Pandas', 'Matplotlib', 'Seaborn']],
   ['Computer Vision', '#34d399', ['OpenCV', 'YOLO', 'Ultralytics', 'YOLOv8-Seg', 'ByteTrack', 'Depth Anything V2']],
